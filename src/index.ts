@@ -14,4 +14,4 @@ app.use(express.json());
 
 app.use(routes);
 
-app.listen(8080, () => console.log("SERVER AT 8080"));
+app.listen(process.env.PORT || 5000, () => console.log("SERVER AT 8080"));
