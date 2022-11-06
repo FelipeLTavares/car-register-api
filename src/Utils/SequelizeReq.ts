@@ -1,6 +1,6 @@
 import { Request, Response } from "express";
 import { CarModel } from "../models/Carro";
-import { SequelizeFilter, UpdateData } from "../Interfaces";
+import { CarroFilter, SequelizeFilter, UpdateData } from "../Interfaces";
 import { Op } from "sequelize";
 import { generateFilter1, generateFilter2 } from ".";
 
@@ -9,7 +9,7 @@ export const GetAll = async () => {
   return Carros;
 };
 
-export const FilterCars = async (filter) => {
+export const FilterCars = async (filter: CarroFilter) => {
   const raw = filter;
   const stringProperties = generateFilter1(raw);
   const numericProperties = generateFilter2(raw);

@@ -118,13 +118,12 @@ export function prepareUpdateData(raw: UpdateData): UpdateData {
   return filter;
 }
 
-interface teste {}
-
 export const PrepareCreateData = (rawData: Carro) => {
-  let readyData = {};
+  let readyData: any = {};
 
   for (const prop in rawData) {
-    const propertyValue = rawData[prop];
+    console.log(typeof prop);
+    const propertyValue = rawData[prop as keyof Carro];
     if (typeof propertyValue === "string") {
       readyData[prop] = propertyValue.toUpperCase();
       continue;
