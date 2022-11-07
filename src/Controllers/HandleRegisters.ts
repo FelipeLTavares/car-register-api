@@ -8,7 +8,6 @@ import { FilterCars, GetAll } from "../Utils/SequelizeReq";
 //GET
 ////ALL
 export const GetAllRegisters = async (req: Request, res: Response) => {
-  return res.json("Olá");
   try {
     const Cars = await GetAll();
     res.status(200).json(Cars);
