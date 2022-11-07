@@ -1,5 +1,5 @@
 import express from "express";
-import routes from "./src/routes";
+import routes from "./routes";
 import dotenv from "dotenv";
 import cors from "cors";
 import helmet from "helmet";
@@ -14,4 +14,4 @@ app.use(express.json());
 
 app.use(routes);
 
-app.listen(process.env.PORT || 5000, () => console.log("SERVER AT 8080"));
+app.listen(process.env.PORT || 8080, () => console.log("SERVER AT 8080"));
